@@ -1,6 +1,6 @@
 import { ipcMain } from 'electron';
 import { parse } from 'url';
-import { setPassword, deletePassword, getPassword } from 'keytar';
+// import { setPassword, deletePassword, getPassword } from 'keytar';
 
 import { IFormFillData } from '~/interfaces';
 import { AppWindow } from '../windows';
@@ -132,6 +132,7 @@ export const runMessagingService = (appWindow: AppWindow) => {
     appWindow.dialogs.formFillDialog.hide();
   });
 
+  /*
   ipcMain.on(
     `form-fill-update-${id}`,
     async (e, _id: string, persistent = false) => {
@@ -158,7 +159,7 @@ export const runMessagingService = (appWindow: AppWindow) => {
         persistent,
       );
     },
-  );
+  );*/
 
   ipcMain.on(`credentials-show-${id}`, (e, data) => {
     appWindow.dialogs.credentialsDialog.webContents.send(
@@ -216,7 +217,7 @@ export const runMessagingService = (appWindow: AppWindow) => {
       );
     }
 
-    await setPassword('wexond', `${hostname}-${username}`, password);
+    //await setPassword('wexond', `${hostname}-${username}`, password);
 
     appWindow.webContents.send(`has-credentials-${view.webContents.id}`, true);
   });
@@ -232,7 +233,7 @@ export const runMessagingService = (appWindow: AppWindow) => {
       },
     });
 
-    await deletePassword('wexond', `${view.hostname}-${fields.username}`);
+    //await deletePassword('wexond', `${view.hostname}-${fields.username}`);
 
     appWindow.viewManager.settingsView.webContents.send(
       'credentials-remove',
@@ -243,8 +244,9 @@ export const runMessagingService = (appWindow: AppWindow) => {
   ipcMain.on(
     'credentials-get-password',
     async (e, id: string, account: string) => {
-      const password = await getPassword('wexond', account);
-      e.sender.send(id, password);
+      //const password = await getPassword('wexond', account);
+      //e.sender.send(id, password);
+      e.sender.send(id, 'test');
     },
   );
 };
