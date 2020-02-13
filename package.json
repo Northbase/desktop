@@ -57,6 +57,7 @@
     "copy-webpack-plugin": "^5.1.1",
     "cross-env": "7.0.0",
     "crypto-js": "^3.1.9-1",
+    "electron": "^9.0.0-beta.1",
     "electron-builder": "22.3.2",
     "electron-extensions": "^6.0.1",
     "electron-rebuild": "^1.10.0",
@@ -99,7 +100,5 @@
     "webpack-dev-server": "^3.10.2",
     "webpack-merge": "^4.2.2"
   },
-  "dependencies": {
-    "electron": "npm:electron-nightly"
-  }
+  "dependencies": {}
 }

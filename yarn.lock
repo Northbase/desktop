@@ -2560,10 +2560,10 @@ electron-updater@4.2.0:
     pako "^1.0.10"
     semver "^6.3.0"
 
-"electron@npm:electron-nightly":
-  version "9.0.0-nightly.20200121"
-  resolved "https://registry.yarnpkg.com/electron-nightly/-/electron-nightly-9.0.0-nightly.20200121.tgz#5da87650810f81bb8f5dcbf90728dbf9295c9789"
-  integrity sha512-nfqkjEy+V0gZR6ykhxgJ7hY9yyb2LyeL/OiVa/Cifpn8Iwb+L30PPrGiyxW77b3i4VKxaONfKfaD+yjMJb3Opw==
+electron@^9.0.0-beta.1:
+  version "9.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-9.0.0-beta.1.tgz#6cce5876a42a9ec140862b85fb799f717550a6ec"
+  integrity sha512-OUqCC/aGYjFb2cA2ta1eBcjBW9yembcwtOQ9jKu75Lk3zTIVPavKLQxkC0LDy1FqTL9/Et8VtBI86EDvnFm3xw==
   dependencies:
     "@electron/get" "^1.0.1"
     "@types/node" "^12.0.12"
